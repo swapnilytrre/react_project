@@ -1,5 +1,5 @@
 import React from 'react'
-class ErrorBoundary extends React.Component {
+export class ErrorBoundary extends React.Component {
     constructor(props) {
         super(props);
         this.state = {hasError: false};
@@ -13,6 +13,9 @@ class ErrorBoundary extends React.Component {
     }
     
     render() {
+        /*return(
+            <div>'error'</div>
+        )*/
         console.log('in error ')
         if (this.state.hasError) {
             // You can render any custom fallback UI
