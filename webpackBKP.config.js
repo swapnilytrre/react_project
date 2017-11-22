@@ -4,13 +4,12 @@ var DIST_PATH = path.resolve(__dirname, 'dist');
 var SOURCE_PATH = path.resolve(__dirname, 'src');
 
 module.exports = {
-    entry: SOURCE_PATH + '/app/index.js',
+    entry: SOURCE_PATH + '/app/app.js',
     output: {
         path: DIST_PATH,
-        filename: 'bundle.js',
+        filename: 'app.dist.js',
         publicPath: '/app/'
     },
-    devtool: "#source-map",
     module: {
         loaders: [
             {

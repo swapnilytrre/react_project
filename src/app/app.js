@@ -3,8 +3,9 @@ import React from 'react';
 import AppHeader from './appHeader'
 import AppFooter from './appFooter'
 import {connect} from 'react-redux'
+import {ErrorBoundary} from './ErrorBoundary'
 
-window.React = React
+//window.React = React
 class SimpleComponent extends React.Component {
     
     getAppheader() {
@@ -16,13 +17,15 @@ class SimpleComponent extends React.Component {
         console.log('here books: ', this.props)
         return (
             <div>
-                {this.getAppheader()}
-                <div id="mapD" style={{width: '100%', height: '700px'}}>
-                    {'map'}
-                </div>
-                <footer>
-                    <AppFooter copyRightTxt={this.props.messages}/>
-                </footer>
+               <ErrorBoundary>
+                    {this.getAppheader()}
+                    <div id="mapD" style={{width: '100%', height: '700px'}}>
+                        {'map'}
+                    </div>
+                    <footer>
+                        <AppFooter copyRightTxt={this.props.messages}/>
+                    </footer>
+               </ErrorBoundary>
             </div>
         );
     }

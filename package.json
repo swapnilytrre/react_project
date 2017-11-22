@@ -4,8 +4,8 @@
   "description": "myFirst project",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack -d && cp src/app/index.html dist/index.html && webpack-dev-server --hot --inline --colors --progress --content-base src/",
-    "prod": "webpack -p && cp src/app/index.html dist/index.html"
+    "build": "webpack -d && cp src/app/index.html dist/index.html && webpack-dev-server --hot --inline --host 0.0.0.0 --port 8080 --colors --progress --content-base src/",
+    "build-prod": "webpack -p && cp src/app/index.html dist/index.html"
   },
   "author": "Swap",
   "license": "ISC",
